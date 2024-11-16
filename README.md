@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -17,3 +18,6 @@ Currently, two official plugins are available:
   //tax amout = subtotal * TaxRate
   //totalwithTax = subtotal + taxamount
     Tax ({(taxRate * 100).toFixed(0)}%)
+=======
+# TINNYTONES
+>>>>>>> 0eaa41d308c8d099d1fe05603ca0302d43928330
