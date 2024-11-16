@@ -1,29 +1,29 @@
 import React from 'react';
-import KidsImage from './../assets/fitSection/Kids.jpg';
-import MenImage from './../assets/fitSection/Men.jpg';
-import WomenImage from './../assets/fitSection/Women.jpg';
+import KidsImage from './../assets/fitSection/24.jpg';
+import MenImage from './../assets/fitSection/22.jpg';
+import WomenImage from './../assets/fitSection/23.jpg';
 import { Link } from 'react-router-dom';
 import { Slide, Fade } from 'react-awesome-reveal';
 function FitGuide() {
   const images = {
-    Men: MenImage,
-    Women: WomenImage,
-    Kids: KidsImage,
+    Portrait: MenImage,
+    Miniature: WomenImage,
+    StillLife: KidsImage,
   };
 
   const links = {
-    Men: '/men',
-    Women: '/women',
-    Kids: '/kids',
+    Portrait: '/portrait',
+    Miniature: '/miniature',
+    StillLife: '/still',
   };
 
   return (
     <div className="container mx-auto py-12">
       <h1 className="text-center leading-wide text-2xl mb-12 font-medium">
-        FIT GUIDE
+        Catageries
       </h1>
       <div className="grid grid-cols-3 gap-6">
-        {['Men', 'Women', 'Kids'].map((label) => (
+        {['Portrait', 'Miniature', 'StillLife'].map((label) => (
           <Link key={label} className="relative  group " to={links[label]}>
             <img
               className="h-full w-full object-cover transform transition-transform duration-300 group-hover:scale-105  "

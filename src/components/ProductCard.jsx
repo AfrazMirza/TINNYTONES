@@ -10,6 +10,7 @@ console.log(product.new_price)
 dispatch(addToCart({
    id : product.id,
    name : product.name,
+   artist :product.artist,
    price : product.new_price ,
    image : product.image
 }))
@@ -38,11 +39,12 @@ dispatch(addToCart({
       <div className="mt-3">
   <Rating name="product_rating" value={product.rating} readOnly size='small' sx={{color :'black'}}  />
         <h1>{product.name}</h1>
+        <h1>{`Artist ${product.artist}`}</h1>
         <div className="flex gap-2">
           <span className=" text-red-500 line-through">
-            ${product.old_price}
+            Rs.{product.old_price}
           </span>
-          <span className="">${product.new_price}</span>
+          <span className="">Rs.{product.new_price}</span>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer>
       <div className="max-w-7xl mx-auto mt-14 px-8 py-4">
-        <div className="flex justify-around flex-wrap">
+        <div className="flex justify-between flex-wrap">
           <div className="text-center m-8">
             <div className="flex gap-4 mb-8">
               <a href="">

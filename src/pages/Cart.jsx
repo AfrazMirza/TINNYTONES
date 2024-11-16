@@ -1,7 +1,15 @@
 import React from 'react'
 import { useSelector ,useDispatch } from 'react-redux'
 import { removeItemsFromCart  , addToCart} from '../redux/cartSlice'
+import { useNavigate } from 'react-router-dom'
 function Cart() {
+
+  const navigate = useNavigate();
+
+  const handlePlaceOrder = () => {
+    navigate('/delivery-address');
+  };
+
   const dispatch = useDispatch()
   const {items} = useSelector((state)=> state.cart)
 
@@ -32,7 +40,7 @@ dispatch(removeItemsFromCart(id))
               <img className='w-20 h-20' src={item.image}/>
              
               
-              <p>price : $ {item.quantity * item.price}</p>
+              <p>price : Rs. {item.quantity * item.price}</p>
               <div className=' border border-gray-300   p-2 w-28 justify-center flex item-center gap-4 my-2'>
                  <button onClick={()=>onIncrease(item.id)}>+</button>
               <p>{item.quantity}</p>
@@ -51,7 +59,21 @@ dispatch(removeItemsFromCart(id))
           <p className='text-start text-red-500'>Your Cart is empty</p>
         
       }
-       <h1 className='text-end text-2xl'>Subtotal : $ {subTotal}</h1>
+       <h1 className='text-end text-2xl'>Subtotal : Rs. {subTotal}</h1>
+       <button
+       onClick={handlePlaceOrder}
+      style={{
+        backgroundColor: 'orange',  
+        color: 'black',
+        textAlign: 'left', 
+  width: '130px',
+        padding: '10px 20px',
+        border: 'none',
+        borderRadius: '5px',
+      }}
+    >
+      Place Order
+    </button>
     </div>
   )
 }

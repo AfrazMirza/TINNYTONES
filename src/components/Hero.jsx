@@ -3,9 +3,10 @@ import 'slick-carousel/slick/slick.css';
 import './Hero.css'
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import men from './../assets/men.png';
-import women from './../assets/women.png';
-import beg from './../assets/beg.png';
+import image from './../assets/3.jpg';
+import women from './../assets/38.jpg';
+import beg from './../assets/39.jpg';
+import art1 from './../assets/40.jpg';
 function Hero() {
   const settings = {
     dots: true,
@@ -18,15 +19,19 @@ function Hero() {
   };
   return (
     <div className='mt-8'>
+      <h1 className="text-center leading-wide text-2xl mb-6 font-medium">Some of the Best Paintings</h1>
       <Slider {...settings}>
         <div>
-          <img className="h-full w-full object-cover" src={men} />
+          <img className="h-full w-full object-cover" src={image} />
         </div>
         <div>
           <img className="h-full w-full object-cover" src={women} />
         </div>
         <div>
           <img className="h-full w-full object-cover" src={beg} />
+        </div>
+        <div>
+          <img className="h-full w-full object-cover" src={art1} />
         </div>
       </Slider>
     </div>
